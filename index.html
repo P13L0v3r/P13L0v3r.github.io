@@ -1,288 +1,324 @@
 <!DOCTYPE html>
-<html>
-<body>
-<div>
-  <link rel="stylesheet" href="home.css" type="text/css" />
-  <div class="home-container">
-    <header class="home-header">
-      <section class="home-container01">
-        <div class="home-container02">
-          <span class="home-label">Player:</span>
-          <input type="text" class="home-textinput input" />
-        </div>
-        <div class="home-container03">
-          <span class="home-label1">Alignment:</span>
-          <input type="text" class="home-textinput01 input" />
-        </div>
-        <div class="home-container04">
-          <span class="home-label2">Race:</span>
-          <input type="text" class="home-textinput02 input" />
-        </div>
-        <div class="home-container05">
-          <span class="home-label3">Level:</span>
-          <input type="text" class="home-textinput03 input" />
-        </div>
-      </section>
-      <section class="home-container06">
-        <div class="home-container07">
-          <span class="home-label4">Character Name:</span>
-          <input type="text" class="home-textinput04 input" />
-        </div>
-        <div class="home-container08">
-          <span class="home-label5">Class:</span>
-          <input type="text" class="home-textinput05 input" />
-        </div>
-        <div class="home-container09">
-          <span class="home-label6">Subclass:</span>
-          <input type="text" class="home-textinput06 input" />
-        </div>
-        <div class="home-container10">
-          <span class="home-label7">XP:</span>
-          <input type="text" class="home-textinput07 input" />
-        </div>
-      </section>
-    </header>
-    <div class="home-body">
-      <div class="home-left-side">
-        <div class="home-health-and-agency">
-          <div class="home-health">
-            <div class="home-labeled-input">
-              <span class="home-text">Health:</span>
-              <input
-                type="number"
-                id="health"
-                name="health"
-                min="0"
-                class="home-textinput08 input"
-              />
+<html lang="en">
+  <head>
+    <title>Tome of Tholmuch Character Sheet</title>
+    <meta property="og:title" content="Tome of Tholmuch Character Sheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Lilita One;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lilita+One:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./home.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <header class="home-header">
+          <section class="home-container01">
+            <div class="home-container02">
+              <span class="home-label">Player:</span>
+              <input type="text" class="home-textinput input" />
             </div>
-            <div class="home-labeled-input1">
-              <span class="home-text01">Max Health:</span>
-              <input
-                type="number"
-                id="max_health"
-                name="max_health"
-                min="0"
-                class="home-textinput09 input"
-              />
+            <div class="home-container03">
+              <span class="home-label1">Alignment:</span>
+              <input type="text" class="home-textinput01 input" />
             </div>
-          </div>
-          <div class="home-agency">
-            <div class="home-labeled-input2">
-              <span class="home-text02">Agency:</span>
-              <input
-                type="number"
-                id="agency"
-                name="agency"
-                min="0"
-                class="home-textinput10 input"
-              />
+            <div class="home-container04">
+              <span class="home-label2">Race:</span>
+              <input type="text" class="home-textinput02 input" />
             </div>
-            <div class="home-labeled-input3">
-              <span class="home-text03">Max Agency:</span>
-              <input
-                type="number"
-                id="max_agency"
-                name="max_agency"
-                min="0"
-                class="home-textinput11 input"
-              />
+            <div class="home-container05">
+              <span class="home-label3">Level:</span>
+              <input type="text" class="home-textinput03 input" />
             </div>
-          </div>
-        </div>
-        <div class="home-mana-and-fortitude">
-          <div class="home-health1">
-            <div class="home-labeled-input4">
-              <span class="home-text04">Mana:</span>
-              <input
-                type="number"
-                id="mana"
-                name="mana"
-                min="0"
-                class="home-textinput12 input"
-              />
+          </section>
+          <section class="home-container06">
+            <div class="home-container07">
+              <span class="home-label4">Character Name:</span>
+              <input type="text" class="home-textinput04 input" />
             </div>
-            <div class="home-labeled-input5">
-              <span class="home-text05">Max Mana:</span>
-              <input
-                type="number"
-                id="max_mana"
-                name="max_mana"
-                min="0"
-                class="home-textinput13 input"
-              />
+            <div class="home-container08">
+              <span class="home-label5">Class:</span>
+              <input type="text" class="home-textinput05 input" />
             </div>
-          </div>
-          <div class="home-agency1">
-            <div class="home-labeled-input6">
-              <span class="home-text06">Fortitude:</span>
-              <input
-                type="number"
-                id="fortitude"
-                name="fortitude"
-                min="0"
-                class="home-textinput14 input"
-              />
+            <div class="home-container09">
+              <span class="home-label6">Subclass:</span>
+              <input type="text" class="home-textinput06 input" />
             </div>
-            <div class="home-labeled-input7">
-              <span class="home-text07">Max Fortitude:</span>
-              <input
-                type="number"
-                id="max_fortitude"
-                name="max_fortitude"
-                min="0"
-                class="home-textinput15 input"
-              />
+            <div class="home-container10">
+              <span class="home-label7">XP:</span>
+              <input type="text" class="home-textinput07 input" />
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="home-right-side">
-        <div class="home-stats">
-          <div class="home-row1">
-            <div class="home-stat">
-              <input
-                type="number"
-                placeholder="0"
-                name="speed"
-                id="speed"
-                min="0"
-                class="home-textinput16 input"
-              />
-              <span class="home-speed">
-                <span>Speed</span>
-                <br />
-              </span>
+          </section>
+        </header>
+        <div class="home-body">
+          <div class="home-left-side">
+            <div class="home-health-and-agency">
+              <div class="home-health">
+                <div class="home-labeled-input">
+                  <span class="home-text">Health:</span>
+                  <input
+                    type="number"
+                    id="health"
+                    min="0"
+                    name="health"
+                    class="home-textinput08 input"
+                  />
+                </div>
+                <div class="home-labeled-input1">
+                  <span class="home-text01">Max Health:</span>
+                  <input
+                    type="number"
+                    id="max_health"
+                    min="0"
+                    name="max_health"
+                    class="home-textinput09 input"
+                  />
+                </div>
+              </div>
+              <div class="home-agency">
+                <div class="home-labeled-input2">
+                  <span class="home-text02">Agency:</span>
+                  <input
+                    type="number"
+                    id="agency"
+                    min="0"
+                    name="agency"
+                    class="home-textinput10 input"
+                  />
+                </div>
+                <div class="home-labeled-input3">
+                  <span class="home-text03">Max Agency:</span>
+                  <input
+                    type="number"
+                    id="max_agency"
+                    min="0"
+                    name="max_agency"
+                    class="home-textinput11 input"
+                  />
+                </div>
+              </div>
             </div>
-            <div class="home-stat01">
-              <input
-                type="number"
-                placeholder="0"
-                id="initiative"
-                name="initiative"
-                min="0"
-                class="home-textinput17 input"
-              />
-              <span class="home-initiative">Initiative</span>
-            </div>
-            <div class="home-stat02">
-              <input
-                type="number"
-                placeholder="0"
-                id="accuracy"
-                name="accuracy"
-                min="0"
-                class="home-textinput18 input"
-              />
-              <span class="home-accuracy">Accuracy</span>
-            </div>
-            <div class="home-stat03">
-              <input
-                type="number"
-                placeholder="0"
-                id="force"
-                name="force"
-                min="0"
-                class="home-textinput19 input"
-              />
-              <span class="home-force">Force</span>
+            <div class="home-mana-and-fortitude">
+              <div class="home-health1">
+                <div class="home-labeled-input4">
+                  <span class="home-text04">Mana:</span>
+                  <input
+                    type="number"
+                    id="mana"
+                    min="0"
+                    name="mana"
+                    class="home-textinput12 input"
+                  />
+                </div>
+                <div class="home-labeled-input5">
+                  <span class="home-text05">Max Mana:</span>
+                  <input
+                    type="number"
+                    id="max_mana"
+                    min="0"
+                    name="max_mana"
+                    class="home-textinput13 input"
+                  />
+                </div>
+              </div>
+              <div class="home-agency1">
+                <div class="home-labeled-input6">
+                  <span class="home-text06">Fortitude:</span>
+                  <input
+                    type="number"
+                    id="fortitude"
+                    min="0"
+                    name="fortitude"
+                    class="home-textinput14 input"
+                  />
+                </div>
+                <div class="home-labeled-input7">
+                  <span class="home-text07">Max Fortitude:</span>
+                  <input
+                    type="number"
+                    id="max_fortitude"
+                    min="0"
+                    name="max_fortitude"
+                    class="home-textinput15 input"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div class="home-row2">
-            <div class="home-stat04">
-              <input
-                type="number"
-                placeholder="0"
-                id="awareness"
-                name="awareness"
-                min="0"
-                class="home-textinput20 input"
-              />
-              <span class="home-awareness">Awareness</span>
+          <div class="home-right-side">
+            <div class="home-stats">
+              <div class="home-row1">
+                <div class="home-stat">
+                  <input
+                    type="number"
+                    id="speed"
+                    min="0"
+                    name="speed"
+                    placeholder="0"
+                    class="home-textinput16 input"
+                  />
+                  <span class="home-speed">
+                    <span>Speed</span>
+                    <br />
+                  </span>
+                </div>
+                <div class="home-stat01">
+                  <input
+                    type="number"
+                    id="initiative"
+                    min="0"
+                    name="initiative"
+                    placeholder="0"
+                    class="home-textinput17 input"
+                  />
+                  <span class="home-initiative">Initiative</span>
+                </div>
+                <div class="home-stat02">
+                  <input
+                    type="number"
+                    id="accuracy"
+                    min="0"
+                    name="accuracy"
+                    placeholder="0"
+                    class="home-textinput18 input"
+                  />
+                  <span class="home-accuracy">Accuracy</span>
+                </div>
+                <div class="home-stat03">
+                  <input
+                    type="number"
+                    id="force"
+                    min="0"
+                    name="force"
+                    placeholder="0"
+                    class="home-textinput19 input"
+                  />
+                  <span class="home-force">Force</span>
+                </div>
+              </div>
+              <div class="home-row2">
+                <div class="home-stat04">
+                  <input
+                    type="number"
+                    id="awareness"
+                    min="0"
+                    name="awareness"
+                    placeholder="0"
+                    class="home-textinput20 input"
+                  />
+                  <span class="home-awareness">Awareness</span>
+                </div>
+                <div class="home-stat05">
+                  <input
+                    type="number"
+                    id="cunning"
+                    min="0"
+                    name="cunning"
+                    placeholder="0"
+                    class="home-textinput21 input"
+                  />
+                  <span class="home-cunning">Cunning</span>
+                </div>
+                <div class="home-stat06">
+                  <input
+                    type="number"
+                    id="personality"
+                    min="0"
+                    name="personality"
+                    placeholder="0"
+                    class="home-textinput22 input"
+                  />
+                  <span class="home-personality">Personality</span>
+                </div>
+                <div class="home-stat07">
+                  <input
+                    type="number"
+                    id="resolve"
+                    min="0"
+                    name="resolve"
+                    placeholder="0"
+                    class="home-textinput23 input"
+                  />
+                  <span class="home-resolve">Resolve</span>
+                </div>
+              </div>
             </div>
-            <div class="home-stat05">
-              <input
-                type="number"
-                placeholder="0"
-                id="cunning"
-                name="cunning"
-                min="0"
-                class="home-textinput21 input"
-              />
-              <span class="home-cunning">Cunning</span>
+            <div class="home-row3">
+              <div class="home-stat08">
+                <input
+                  type="text"
+                  id="hit_dice"
+                  name="hit_dice"
+                  placeholder="1d8"
+                  class="home-textinput24 input"
+                />
+                <span class="home-hit-dice">Hit Dice</span>
+              </div>
+              <div class="home-stat09">
+                <input
+                  type="number"
+                  id="critical"
+                  min="0"
+                  name="critical"
+                  placeholder="0"
+                  class="home-textinput25 input"
+                />
+                <span class="home-critical">Critical</span>
+              </div>
+              <div class="home-stat10">
+                <input
+                  type="number"
+                  id="recoil"
+                  min="0"
+                  name="recoil"
+                  placeholder="0"
+                  class="home-textinput26 input"
+                />
+                <span class="home-recoil">Recoil</span>
+              </div>
+              <div class="home-stat11">
+                <input
+                  type="number"
+                  id="cones"
+                  min="0"
+                  name="cones"
+                  placeholder="0"
+                  class="home-textinput27 input"
+                />
+                <span class="home-cones">Cones</span>
+              </div>
             </div>
-            <div class="home-stat06">
-              <input
-                type="number"
-                placeholder="0"
-                id="personality"
-                name="personality"
-                min="0"
-                class="home-textinput22 input"
-              />
-              <span class="home-personality">Personality</span>
-            </div>
-            <div class="home-stat07">
-              <input
-                type="number"
-                placeholder="0"
-                id="resolve"
-                name="resolve"
-                min="0"
-                class="home-textinput23 input"
-              />
-              <span class="home-resolve">Resolve</span>
-            </div>
-          </div>
-        </div>
-        <div class="home-row3">
-          <div class="home-stat08">
-            <input
-              type="text"
-              placeholder="1d8"
-              id="hit_dice"
-              name="hit_dice"
-              class="home-textinput24 input"
-            />
-            <span class="home-hit-dice">Hit Dice</span>
-          </div>
-          <div class="home-stat09">
-            <input
-              type="number"
-              placeholder="0"
-              id="critical"
-              name="critical"
-              min="0"
-              class="home-textinput25 input"
-            />
-            <span class="home-critical">Critical</span>
-          </div>
-          <div class="home-stat10">
-            <input
-              type="number"
-              placeholder="0"
-              id="recoil"
-              name="recoil"
-              min="0"
-              class="home-textinput26 input"
-            />
-            <span class="home-recoil">Recoil</span>
-          </div>
-          <div class="home-stat11">
-            <input
-              type="number"
-              placeholder="0"
-              id="cones"
-              name="cones"
-              min="0"
-              class="home-textinput27 input"
-            />
-            <span class="home-cones">Cones</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</body>
+  </body>
 </html>
