@@ -1,0 +1,92 @@
+.heading-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+
+.gallery-card1-gallery-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.gallery-card1-image {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  object-fit: cover;
+}
+.gallery-card1-link {
+  display: contents;
+}
+.gallery-card1-text {
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-halfunit);
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-halfunit);
+  text-decoration: none;
+}
+.gallery-card1-text1 {
+  color: var(--dl-color-gray-500);
+  align-self: flex-start;
+}
+
+
+
+
+
+
+@media(max-width: 767px) {
+  .gallery-card1-gallery-card {
+    flex-direction: column;
+  }
+}
+@media(max-width: 479px) {
+  .gallery-card1-image {
+    height: 10rem;
+  }
+}
+
+.video-games1-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+.video-games1-gallery {
+  width: 100%;
+  display: grid;
+  padding: var(--dl-space-space-threeunits);
+  grid-gap: var(--dl-space-space-unit);
+  max-width: var(--dl-size-size-maxwidth);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media(max-width: 991px) {
+  .video-games1-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 767px) {
+  .video-games1-gallery {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+}
+@media(max-width: 479px) {
+  .video-games1-gallery {
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-twounits);
+  }
+}
