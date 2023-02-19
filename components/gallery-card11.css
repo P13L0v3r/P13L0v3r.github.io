@@ -20,7 +20,6 @@
   color: var(--dl-color-gray-500);
   align-self: flex-start;
 }
-
 @media(max-width: 767px) {
   .gallery-card11-gallery-card {
     flex-direction: column;
