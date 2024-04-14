@@ -23,6 +23,7 @@ md-block:not([rendered]) {
     color: var(--fg-color);
     padding: var(--standard-padding);
     position: relative;
+    margin-top: var(--standard-padding);
 }
 
 .blog-post h1 {
