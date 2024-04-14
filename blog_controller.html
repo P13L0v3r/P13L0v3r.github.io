@@ -17,7 +17,9 @@
                 });
             }
             function fetchLastModified(path, callback) {
-                console.log(`https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/commits?path=${path}`);
+                console.log(
+                    `https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/commits?path=${path}`
+                );
                 fetch(
                     `https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/commits?path=${path}`
                 ).then((r) => {
@@ -27,14 +29,15 @@
 
             getBlogs((files) => {
                 console.log(files);
-                    for (file in files) {
-                        fetchLastModified(file.path, (date) => {
-                            var post = `<div class="blog-post centered hide-until-load neumorphic"><md-block src="${file.path}" rendered="remote">This post wasn't found.</md-block><footer>Last Edited: ${date}</footer></div>`;
-                            $("body").append(post);
-                            console.log(date);
-                        });
-                    }
-                });
+                for (file in files) {
+                    console.log(file);
+                    fetchLastModified(file.path, (date) => {
+                        var post = `<div class="blog-post centered hide-until-load neumorphic"><md-block src="${file.path}" rendered="remote">This post wasn't found.</md-block><footer>Last Edited: ${date}</footer></div>`;
+                        $("body").append(post);
+                        console.log(date);
+                    });
+                }
+            });
 
             $(document).ready(function () {
                 $(".hide-until-load").show();
