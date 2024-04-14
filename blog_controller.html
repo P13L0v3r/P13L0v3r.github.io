@@ -17,10 +17,10 @@
                 });
             }
             function fetchLastModified(path, callback) {
+                console.log(`https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/commits?path=${path}`);
                 fetch(
                     `https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/commits?path=${path}`
                 ).then((r) => {
-                    console.log(r);
                     callback(r[0].commit.author.date);
                 });
             }
