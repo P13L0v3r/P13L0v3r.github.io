@@ -9,6 +9,14 @@
         <link rel="stylesheet" href="../style.css" />
         <title>Hugo's Portfolio</title>
         <script>
+            function fetchLastModified(url, callback) {
+                fetch(url, { method: "HEAD" }).then((r) => {
+                    callback(new Date(r.headers.get("Last-Modified")));
+                });
+            }
+
+            fetchLastModified("hello_blog.md", (date) => {console.log(date)});
+
             $(document).ready(function () {
                 $(".hide-until-load").show();
             });
