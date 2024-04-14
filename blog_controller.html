@@ -10,21 +10,28 @@
         <title>Hugo's Portfolio</title>
         <script>
             function getBlogs(callback) {
-                fetch("https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/contents/blogs/").then((r) => {
-                    callback(r);
-                })
+                fetch(
+                    "https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/contents/blogs/"
+                ).then((r) => {
+                    callback(r.json());
+                });
             }
-            function fetchLastModified(url, callback) {
-                fetch(url, { method: "HEAD" }).then((r) => {
-                    callback(new Date(r.headers.get("Last-Modified")));
+            function fetchLastModified(path, callback) {
+                fetch(
+                    `https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/commits?path=${path}`
+                ).then((r) => {
+                    callback(r[0].author.date);
                 });
             }
 
-            fetchLastModified("blogs/hello_blog.md", (date) => {
-                console.log(date);
+            getBlogs((files) => {
+                files.forEach((file) => {
+                    fetchLastModified(file.path, (date) => {
+                        var post = `<div class="blog-post centered hide-until-load neumorphic"><md-block src="${file.path}" rendered="remote">This post wasn't found.</md-block><footer>Last Edited: ${date}</footer></div>`;
+                        $("body").append(post);
+                    });
+                });
             });
-
-            getBlogs((files) => console.log(files.json()));
 
             $(document).ready(function () {
                 $(".hide-until-load").show();
