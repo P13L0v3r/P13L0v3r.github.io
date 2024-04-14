@@ -10,14 +10,9 @@
         <title>Hugo's Portfolio</title>
         <script>
             function getBlogs(callback) {
-                var fs = require("fs");
-                var files = fs.readdir("blogs/", (err, files) => {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        callback(files);
-                    }
-                });
+                fetch("/blogs", {method: "GET"}).then((r) => {
+                    callback(r);
+                })
             }
             function fetchLastModified(url, callback) {
                 fetch(url, { method: "HEAD" }).then((r) => {
@@ -40,7 +35,7 @@
     <body>
         <!-- Here is a template for creating blog posts -->
         <div class="blog-post centered hide-until-load neumorphic">
-            <md-block src="hello_blog.md" rendered="remote">
+            <md-block src="blogs/hello_blog.md" rendered="remote">
                 This post wasn't found.
             </md-block>
             <footer>Last Edited: April 13, 2024</footer>
