@@ -13,7 +13,7 @@
                 fetch(
                     "https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/contents/blogs/"
                 ).then((r) => {
-                    callback(r.json());
+                    r.json().then((files) => callback(files));
                 });
             }
             function fetchLastModified(path, callback) {
