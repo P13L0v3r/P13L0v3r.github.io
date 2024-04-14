@@ -29,7 +29,7 @@
             getBlogs((files) => {
                 for (file in files) {
                     fetchLastModified(files[file].path, (date) => {
-                        console.log(files[file]);
+                        console.log(files[file].path);
                         console.log(date);
                         var post = `<div class="blog-post centered hide-until-load neumorphic"><md-block src="${files[file].path}" rendered="remote">This post wasn't found.</md-block><footer>Last Edited: ${date}</footer></div>`;
                         $("body").append(post);
