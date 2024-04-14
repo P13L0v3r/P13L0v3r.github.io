@@ -20,7 +20,7 @@
                 fetch(
                     `https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/commits?path=${path}`
                 ).then((r) => {
-                    callback(r[0].author.date);
+                    callback(r[0].commit.author.date);
                 });
             }
 
