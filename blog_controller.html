@@ -13,7 +13,7 @@
                 fetch(
                     "https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/contents/blogs/"
                 ).then((r) => {
-                    callback(r);
+                    r.json().then((files) => callback(files));
                 });
             }
             function fetchLastModified(path, callback) {
@@ -30,9 +30,9 @@
             getBlogs((files) => {
                 console.log(files);
                 for (file in files) {
-                    console.log(file);
-                    fetchLastModified(file.path, (date) => {
-                        var post = `<div class="blog-post centered hide-until-load neumorphic"><md-block src="${file.path}" rendered="remote">This post wasn't found.</md-block><footer>Last Edited: ${date}</footer></div>`;
+                    console.log(files[file]);
+                    fetchLastModified(files[file].path, (date) => {
+                        var post = `<div class="blog-post centered hide-until-load neumorphic"><md-block src="${files[file].path}" rendered="remote">This post wasn't found.</md-block><footer>Last Edited: ${date}</footer></div>`;
                         $("body").append(post);
                         console.log(date);
                     });
