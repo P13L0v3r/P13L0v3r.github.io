@@ -30,9 +30,10 @@
                 for (file in files) {
                     var path = files[file].path;
                     fetchLastModified(path, (date) => {
+                        var new_date = new Date(date);
                         console.log(path);
-                        console.log(date);
-                        var post = `<div class="blog-post centered neumorphic"><md-block src="${path}" rendered="remote">This post wasn't found.</md-block><footer>Last Edited: ${date}</footer></div>`;
+                        console.log(new_date);
+                        var post = `<div class="blog-post centered neumorphic"><md-block src="${path}" rendered="remote">This post wasn't found.</md-block><footer>Last Edited: ${new_date.toString()}</footer></div>`;
                         $("body").append(post);
                     });
                 }
