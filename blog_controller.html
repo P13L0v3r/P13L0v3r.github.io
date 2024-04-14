@@ -9,13 +9,27 @@
         <link rel="stylesheet" href="../style.css" />
         <title>Hugo's Portfolio</title>
         <script>
+            function getBlogs(callback) {
+                var fs = require("fs");
+                var files = fs.readdir("blogs/", (err, files) => {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        callback(files);
+                    }
+                });
+            }
             function fetchLastModified(url, callback) {
                 fetch(url, { method: "HEAD" }).then((r) => {
                     callback(new Date(r.headers.get("Last-Modified")));
                 });
             }
 
-            fetchLastModified("blogs/hello_blog.md", (date) => {console.log(date)});
+            fetchLastModified("blogs/hello_blog.md", (date) => {
+                console.log(date);
+            });
+
+            getBlogs((files) => console.log(files));
 
             $(document).ready(function () {
                 $(".hide-until-load").show();
