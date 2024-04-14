@@ -15,6 +15,10 @@ body {
     font-family: 'Trebuchet MS';
 }
 
+md-block:not([rendered]) {
+    display: none;
+}
+
 .blog-post {
     color: var(--fg-color);
     padding: var(--standard-padding);

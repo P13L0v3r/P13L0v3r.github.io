@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
         <script
             type="module"
             src="https://md-block.verou.me/md-block.js"
         ></script>
         <link rel="stylesheet" href="../style.css" />
         <title>Hugo's Portfolio</title>
-        <script>
+        <!-- <script>
             $(document).ready(function () {
                 $(".hide-until-load").show();
             });
-        </script>
+        </script> -->
     </head>
 
     <body>
         <!-- Here is a template for creating blog posts -->
         <div class="blog-post centered hide-until-load neumorphic">
-            <md-block>
-# Hello World
-Paragraph test within markdown 
+            <md-block rendered="rendered">
+# Hello Blog
+First blog post! 
             </md-block>
             <footer>Last Edited: April 13, 2024</footer>
         </div>
