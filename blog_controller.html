@@ -10,7 +10,7 @@
         <title>Hugo's Portfolio</title>
         <script>
             function getBlogs(callback) {
-                fetch("/blogs", {method: "GET"}).then((r) => {
+                fetch("/blogs/?orderby=modifiedTime:asc", {method: "GET"}).then((r) => {
                     callback(r);
                 })
             }
