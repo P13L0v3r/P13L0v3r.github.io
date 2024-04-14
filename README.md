@@ -1,0 +1,1 @@
+This is a website I'm working on as a project itself, but also to share my completed/other current projects.

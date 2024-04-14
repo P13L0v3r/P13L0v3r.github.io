@@ -6,7 +6,7 @@
             type="module"
             src="https://md-block.verou.me/md-block.js"
         ></script>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../style.css" />
         <title>Hugo's Portfolio</title>
         <script>
             $(document).ready(function () {
@@ -14,7 +14,15 @@
             });
         </script>
     </head>
+
     <body>
-        <a href="./blogs/hello_blog.html">Blogs</a>
+        <!-- Here is a template for creating blog posts -->
+        <div class="blog-post centered hide-until-load neumorphic">
+            <md-block>
+# Hello World
+Paragraph test within markdown 
+            </md-block>
+            <footer>Last Edited: April 13, 2024</footer>
+        </div>
     </body>
 </html>

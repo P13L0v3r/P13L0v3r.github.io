@@ -1,0 +1,50 @@
+:root {
+    --fg-color: #edebd7;
+    --bg-color-dark: #2e2e2e;
+    --bg-color: #383633;
+    --bg-color-light: #433f38;
+    --ac-color: #ffc100;
+    --ac-color-light: #e3b23c;
+    --standard-padding: 1rem;
+}
+
+html {
+    background-color: var(--bg-color);
+}
+body {
+    font-family: 'Trebuchet MS';
+}
+
+.blog-post {
+    color: var(--fg-color);
+    padding: var(--standard-padding);
+    position: relative;
+}
+
+.blog-post h1 {
+    color: var(--ac-color-light);
+}
+
+.blog-post footer {
+    font-size: calc(var(--standard-padding) * 0.6);
+    position: absolute;
+    right: var(--standard-padding);
+    bottom: var(--standard-padding);
+}
+
+.neumorphic {
+    border-radius: var(--standard-padding);
+    box-shadow:
+        inset calc(var(--standard-padding) / 2) calc(var(--standard-padding) / 2) var(--standard-padding) var(--bg-color-dark),
+        calc(var(--standard-padding) / 2) calc(var(--standard-padding) / 2) var(--standard-padding) var(--bg-color-dark),
+        inset calc(var(--standard-padding) / -2) calc(var(--standard-padding) / -2) var(--standard-padding) var(--bg-color-light),
+        calc(var(--standard-padding) / -2) calc(var(--standard-padding) / -2) var(--standard-padding) var(--bg-color-light);
+}
+
+.centered {
+    margin: auto 10%;
+}
+
+.hide-until-load {
+    display: none;
+}
