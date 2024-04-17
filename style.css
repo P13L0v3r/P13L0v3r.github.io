@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-box {
     width: 50%;
-    border-spacing: calc(var(--standard-padding) * 2) 0;
+    border-spacing: calc(var(--standard-padding) * 2) var(--standard-padding);
 }
 
 .nav-box td {
