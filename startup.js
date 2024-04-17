@@ -5,6 +5,7 @@ $(document).ready(function () {
         },
         function () {
             $(this).addClass("raised");
+            $(this).removeClass("pressed");
         }
     );
     $(".nav-box td")
