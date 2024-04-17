@@ -1,10 +1,9 @@
 :root {
-    --fg-color: #edebd7;
-    --bg-color-dark: #2e2e2e;
-    --bg-color: #383633;
-    --bg-color-light: #433f38;
-    --ac-color: #ffc100;
-    --ac-color-light: #e3b23c;
+    --fg-color: #9CAFAA;
+    --bg-color-dark: #9CAFAA;
+    --bg-color: #D6DAC8;
+    --bg-color-light: #FBF3D5;
+    --ac-color: #FA7070;
     --standard-padding: 1rem;
 }
 
@@ -34,7 +33,7 @@ md-block:not([rendered]) {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--ac-color-light);
+    color: var(--ac-color);
 }
 
 .blog-post footer {
@@ -75,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-box td {
     text-align: center;
-    color: var(--ac-color-light);
+    color: var(--ac-color);
 }
 
 .focus-box {

@@ -1,0 +1,17 @@
+:root {
+    --fg-color: #9CAFAA;
+    --bg-color-dark: #9CAFAA;
+    --bg-color: #D6DAC8;
+    --bg-color-light: #FBF3D5;
+    --ac-color: #FA7070;
+    --standard-padding: 1rem;
+}
+
+:root {
+    --fg-color: #9CAFAA;
+    --bg-color-dark: #9CAFAA;
+    --bg-color: #B3C8CF;
+    --bg-color-light: #BED7DC;
+    --ac-color: #FA7070;
+    --standard-padding: 1rem;
+}
