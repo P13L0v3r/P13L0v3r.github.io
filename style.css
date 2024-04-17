@@ -29,12 +29,11 @@ md-block:not([rendered]) {
 
 .blog-post {
     color: var(--fg-color);
-    padding: var(--standard-padding);
     position: relative;
-    margin-top: var(--standard-padding);
+    width: 80%;
 }
 
-.blog-post h1 {
+h1, h2, h3, h4, h5, h6 {
     color: var(--ac-color-light);
 }
 
@@ -46,6 +45,9 @@ md-block:not([rendered]) {
 }
 
 .neumorphic {
+    padding: var(--standard-padding);
+    margin-top: var(--standard-padding);
+    margin-bottom: var(--standard-padding);
     border-radius: var(--standard-padding);
     box-shadow:
         inset calc(var(--standard-padding) / 2) calc(var(--standard-padding) / 2) var(--standard-padding) var(--bg-color-dark),
@@ -54,19 +56,48 @@ md-block:not([rendered]) {
         calc(var(--standard-padding) / -2) calc(var(--standard-padding) / -2) var(--standard-padding) var(--bg-color-light);
 }
 
-.nav-box {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1);
-    background-color: #e3b23c;
+.raised {
+    box-shadow:
+        calc(var(--standard-padding) / 2) calc(var(--standard-padding) / 2) var(--standard-padding) var(--bg-color-dark),
+        calc(var(--standard-padding) / -2) calc(var(--standard-padding) / -2) var(--standard-padding) var(--bg-color-light);
 }
 
-.nav-box a {
-    background-color: #ffc100;
+.pressed {
+    box-shadow:
+        inset calc(var(--standard-padding) / 2) calc(var(--standard-padding) / 2) var(--standard-padding) var(--bg-color-dark),
+        inset calc(var(--standard-padding) / -2) calc(var(--standard-padding) / -2) var(--standard-padding) var(--bg-color-light);
+}
+
+.nav-box {
+    width: 50%;
+    border-spacing: calc(var(--standard-padding) * 2) 0;
+}
+
+.nav-box td {
+    text-align: center;
+    color: var(--ac-color-light);
+}
+
+.focus-box {
+    width: 80%;
 }
 
 .centered {
-    margin: auto 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 .hide-until-load {
