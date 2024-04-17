@@ -2,42 +2,33 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Hugo's Portfolio</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <!-- <script type="module" src="https://md-block.verou.me/md-block.js"></script> -->
         <link rel="stylesheet" href="style.css" />
-        <title>Hugo's Portfolio</title>
-        <script>
-            $(document).ready(function () {
-                $(".nav-box td").hover(
-                    function () {
-                        $(this).removeClass("raised");
-                    },
-                    function () {
-                        $(this).addClass("raised");
-                    }
-                );
-                $(".nav-box td")
-                    .on("mousedown", function () {
-                        $(this).addClass("pressed");
-                    })
-                    .on("mouseup", function () {
-                        $(this).removeClass("pressed");
-                    });
-                $(".nav-box td")
-                    .on("click", function () {
-                        var href = $(this).data("href");
-                        window.location.href = href;
-                    });
-                $(".hide-until-load").show();
-            });
-        </script>
+        <script src="startup.js"></script>
     </head>
     <body>
         <table class="nav-box centered">
             <tr>
-                <td class="neumorphic raised unselectable pointer" data-href="blog_controller.html">Bio</td>
-                <td class="neumorphic raised unselectable pointer" data-href="blog_controller.html">Portfolio</td>
-                <td class="neumorphic raised unselectable pointer" data-href="blog_controller.html">Blog</td>
+                <td
+                    class="neumorphic raised unselectable pointer"
+                    data-href="blog_controller.html"
+                >
+                    Bio
+                </td>
+                <td
+                    class="neumorphic raised unselectable pointer"
+                    data-href="blog_controller.html"
+                >
+                    Portfolio
+                </td>
+                <td
+                    class="neumorphic raised unselectable pointer"
+                    data-href="blog_controller.html"
+                >
+                    Blog
+                </td>
             </tr>
         </table>
         <div class="focus-box neumorphic centered">

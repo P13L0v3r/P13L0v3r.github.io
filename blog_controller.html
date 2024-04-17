@@ -1,51 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script
-            type="module"
-            src="https://md-block.verou.me/md-block.js"
-        ></script>
-        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Hugo's Portfolio</title>
-        <script>
-            /* function getBlogs(callback) {
-                fetch(
-                    "https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/contents/blogs/"
-                ).then((r) => {
-                    r.json().then((files) => callback(files));
-                });
-            }
-            function fetchLastModified(path, callback) {
-                fetch(
-                    `https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/commits?path=${path}`
-                ).then((r) => {
-                    r.json().then((commits) =>
-                        callback(commits[0].commit.committer.date)
-                    );
-                });
-            }
-
-            getBlogs((files) => {
-                for (file in files) {
-                    var path = files[file].path;
-                    fetchLastModified(path, (date) => {
-                        var new_date = new Date(date);
-                        console.log(path);
-                        console.log(new_date);
-                        var post = `<div class="blog-post centered neumorphic"><md-block src="${path}" rendered="remote">This post wasn't found.</md-block><footer>Last Edited: ${new_date.toString()}</footer></div>`;
-                        $("body").append(post);
-                    });
-                }
-            }); */
-
-            $(document).ready(function () {
-                $(".hide-until-load").show();
-            });
-        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script src="startup.js"></script>
     </head>
 
     <body>
+        <table class="nav-box centered">
+            <tr>
+                <td class="neumorphic raised unselectable pointer" data-href="index.html">Home</td>
+                <td class="neumorphic raised unselectable pointer" data-href="index.html">Bio</td>
+                <td class="neumorphic raised unselectable pointer" data-href="index.html">Portfolio</td>
+            </tr>
+        </table>
         <div class=" hide-until-load blog-post centered neumorphic">
             <md-block rendered="remote">
 # Hello Blog
