@@ -6,10 +6,10 @@
             type="module"
             src="https://md-block.verou.me/md-block.js"
         ></script>
-        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="style.css" />
         <title>Hugo's Portfolio</title>
         <script>
-            function getBlogs(callback) {
+            /* function getBlogs(callback) {
                 fetch(
                     "https://api.github.com/repos/P13L0v3r/P13L0v3r.github.io/contents/blogs/"
                 ).then((r) => {
@@ -37,7 +37,7 @@
                         $("body").append(post);
                     });
                 }
-            });
+            }); */
 
             $(document).ready(function () {
                 $(".hide-until-load").show();
@@ -46,5 +46,14 @@
     </head>
 
     <body>
+        <div class="blog-post centered neumorphic">
+            <md-block rendered="remote">
+# Hello Blog
+This is my very first blog post. It has taken be hours to write, because I've been tweaking this website.
+
+Now it automatically loads the blog posts from a folder of Markdown files (like this one).
+                </md-block>
+            <footer>Last Edited: April 14th, 2:39am</footer>
+        </div>
     </body>
 </html>

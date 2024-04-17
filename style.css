@@ -8,11 +8,19 @@
     --standard-padding: 1rem;
 }
 
+html, body {
+    padding: 0;
+}
+
 html {
     background-color: var(--bg-color);
+    margin: 0;
+    font-size: 16px;
 }
+
 body {
     font-family: 'Trebuchet MS';
+    margin: var(--standard-padding);
 }
 
 md-block:not([rendered]) {
@@ -46,10 +54,27 @@ md-block:not([rendered]) {
         calc(var(--standard-padding) / -2) calc(var(--standard-padding) / -2) var(--standard-padding) var(--bg-color-light);
 }
 
+.nav-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1);
+    background-color: #e3b23c;
+}
+
+.nav-box a {
+    background-color: #ffc100;
+}
+
 .centered {
     margin: auto 10%;
 }
 
 .hide-until-load {
     display: none;
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 32px;
+    }
 }
