@@ -105,6 +105,20 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
+table {
+    text-align: center;
+    border-spacing: 0;
+}
+
+td {
+    border-width: 1px;
+    border-style: solid;
+}
+
+td {
+    padding: 3px;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1024) {
     html {
         font-size: calc(2vw);
