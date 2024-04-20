@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
-    $(".snippet").each(async function () {
+    $(".snippet").each(function () {
         var snippetToReplace = $(this);
         var href = snippetToReplace.data("href");
 
-        await $.get(href, function (data) {
+        $.get(href, function (data) {
             snippetToReplace.replaceWith(data);
         });
     });
