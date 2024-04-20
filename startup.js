@@ -1,21 +1,16 @@
 $(document).ready(function () {
 
-    /* var snippets = $(".snippet");
-    var snippetToReplace = null;
-    for (let i = 0; i < snippets.length; i++) {
-        snippetToReplace = $(snippets[i]);
-        
-    } */
-
     $(".snippet").each(async function () {
         var snippetToReplace = $(this);
         var href = snippetToReplace.data("href");
-        
+
         await $.get(href, function (data) {
             snippetToReplace.replaceWith(data);
         });
     });
+});
 
+$(window).on("load", function () {
     $(".custom-button").hover(
         function () {
             $(this).removeClass("raised");
@@ -45,4 +40,4 @@ $(document).ready(function () {
         }
     });
     $(".hide-until-load").show();
-});
+})
