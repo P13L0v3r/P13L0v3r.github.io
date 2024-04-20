@@ -1,21 +1,20 @@
 $(document).ready(function () {
 
-    var snippets = $(".snippet");
+    /* var snippets = $(".snippet");
     var snippetToReplace = null;
-    var index = 0;
-    while (index < snippets.length) {
+    for (let i = 0; i < snippets.length; i++) {
         snippetToReplace = $(snippets[i]);
-        var href = snippetToReplace.data("href");
-        $.get(href, function (data) {
-            snippetToReplace.replaceWith(data);
-        }).always(function () { index++ });
-    }
+        
+    } */
 
-    /* $(".snippet").each(function () {
+    $(".snippet").each(async function () {
         var snippetToReplace = $(this);
-
-
-    }); */
+        var href = snippetToReplace.data("href");
+        
+        await $.get(href, function (data) {
+            snippetToReplace.replaceWith(data);
+        });
+    });
 
     $(".custom-button").hover(
         function () {
