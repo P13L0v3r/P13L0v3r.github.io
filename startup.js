@@ -1,16 +1,4 @@
 $(document).ready(function () {
-
-    $(".snippet").each(function () {
-        var snippetToReplace = $(this);
-        var href = snippetToReplace.data("href");
-
-        $.get(href, function (data) {
-            snippetToReplace.replaceWith(data);
-        });
-    });
-});
-
-$(window).on("load", function () {
     $(".custom-button").hover(
         function () {
             $(this).removeClass("raised");
@@ -40,4 +28,4 @@ $(window).on("load", function () {
         }
     });
     $(".hide-until-load").show();
-})
+});

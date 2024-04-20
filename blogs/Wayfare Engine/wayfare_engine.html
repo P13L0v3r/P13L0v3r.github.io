@@ -7,7 +7,19 @@
         <script src="../../startup.js"></script>
     </head>
     <body>
-        <div class="snippet" data-href="../blog_return_button.html"></div>
+        <div
+            class="neumorphic raised unselectable pointer nav-box custom-button"
+            data-href="../../blog_controller.html"
+            style="
+                width: calc(10% - calc(var(--standard-padding) * 6));
+                position: fixed;
+                left: var(--standard-padding);
+                top: var(--standard-padding);
+            "
+        >
+            Blogs
+        </div>
+
         <div class="blog-post centered neumorphic raised">
             <h1>The Wayfare Engine</h1>
             <p>
@@ -20,19 +32,23 @@
                 The Wayfare Engine is intended to be used in roleplaying games
                 that focus on exploration, discovery, or advancement. They can
                 also be inserted into a system as a way of generating random
-                encounters or used as a type of oracle in solo games.
+                encounters or used in conjunction with an oracle in solo games.
             </p>
             <p></p>
-            <h3>Some Terms</h3>
+            <!-- <h3>Some Terms</h3>
             <p>
                 <strong>Deck.</strong> Refers to a collection of cards. The
                 rules will call for a deck to be assembled. When this happens
                 the contents of the deck will be specified.
-            </p>
+            </p> -->
             <h2>Events</h2>
             <p>
-                To determine the kind of event encountered, simply draw a card from a deck (excluding the jokers) and consult the
-                following table, reading from left to right.
+                To determine the kind of event encountered, simply draw a card
+                from a deck (excluding the jokers) and consult the following
+                table, reading from left to right. You can use a whole deck,
+                arrange the cards face down in a grid to create a map for a
+                dungeon or wilderness crawl, or some other creative way of
+                drawing the cards that feels appropriate.
             </p>
             <table class="hide-until-load">
                 <tr>
@@ -65,29 +81,36 @@
                     <td class="event-cell">Advent</td>
                 </tr>
             </table>
-            <h2>Event: Advent</h2>
+            <p>
+                Here are the brief descriptions of each event. They are left as
+                guidelines for your own elaboration later. If you are so
+                inclined, you can create your own or find supplementary tables or
+                oracles to determine the details for the event. The Wayfare
+                Engine is simply a template for exploration and discovery.
+            </p>
+            <h2>Advent</h2>
             <p>
                 An <strong>Advent</strong> is some milestone of discovery. The
                 group gains knowledge about some aspect of the world.
             </p>
-            <h2>Event: Calm</h2>
+            <h2>Calm</h2>
             <p>
                 A <strong>Calm</strong> is a period where very little happens
                 outside the group. This is an opportunity for players and
                 characters to roleplay between themselves.
             </p>
-            <h2>Event: Combat</h2>
+            <h2>Combat</h2>
             <p>
                 A <strong>Combat</strong> is some attack by an outside force.
                 Enemies of the group seek to do them harm.
             </p>
-            <h2>Event: Counsel</h2>
+            <h2>Counsel</h2>
             <p>
                 A <strong>Counsel</strong> is a roleplay interaction with a
                 faction outside of the group, usually requiring diplomacy and
                 tact to resolve some issue the outside faction faces.
             </p>
-            <h2>Event: Emergency</h2>
+            <h2>Emergency</h2>
             <p>
                 An <strong>Emergency</strong> is a sudden disaster that the
                 group faces that will result in harm to the group.

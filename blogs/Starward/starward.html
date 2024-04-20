@@ -102,7 +102,19 @@
         </style>
     </head>
     <body>
-        <div class="snippet" data-href="../blog_return_button.html"></div>
+        <div
+            class="neumorphic raised unselectable pointer nav-box custom-button"
+            data-href="../../blog_controller.html"
+            style="
+                width: calc(10% - calc(var(--standard-padding) * 6));
+                position: fixed;
+                left: var(--standard-padding);
+                top: var(--standard-padding);
+            "
+        >
+            Blogs
+        </div>
+
         <div class="blog-post centered neumorphic raised">
             <h1>Welcome</h1>
 
@@ -143,8 +155,8 @@
                 profiles, but Starward provides worksheets that can be filled
                 out in
                 <em>Starward Field Manuals</em>. Each player gets their own
-                <em>Starward Field Manual</em> that also includes a section for the
-                character that they will be playing (see below).
+                <em>Starward Field Manual</em> that also includes a section for
+                the character that they will be playing (see below).
             </p>
 
             <p>
@@ -217,7 +229,76 @@
                 the contents of the deck will be specified.
             </p>
 
-            <h1>Combat</h1>
+            <h1>The Wayfare Engine</h1>
+            <p>
+                The core of Starward is the
+                <a href="../Wayfare Engine/wayfare_engine.html"
+                    >Wayfare Engine</a
+                >, a method of drawing cards to create events (commonly called
+                encounters in other systems) to interact with. Starward expands
+                on the base Wayfare Engine with ways to incorporate your
+                <em>Field Manuals</em> and other procedural elements to create
+                diverse and rooted events.
+            </p>
+
+            <h2>Events</h2>
+            <p>
+                To determine the kind of event encountered, simply draw a card
+                from some source of cards, such as a deck or from a map
+                (explained a little later). Once you have your event card,
+                consult the following table, reading from left to right.
+            </p>
+            <table class="hide-until-load">
+                <tr>
+                    <th colspan="2">Card</th>
+                    <th class="event-cell">Event</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Face</td>
+                    <td>Black</td>
+                    <td class="event-cell">Combat</td>
+                </tr>
+                <tr>
+                    <td>Red</td>
+                    <td class="event-cell">Emergency</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Number</td>
+                    <td>Clubs</td>
+                    <td class="event-cell">Counsel</td>
+                </tr>
+                <tr>
+                    <td>Spades</td>
+                    <td rowspan="2" class="event-cell">Calm</td>
+                </tr>
+                <tr>
+                    <td>Hearts</td>
+                </tr>
+                <tr>
+                    <td>Diamonds</td>
+                    <td class="event-cell">Advent</td>
+                </tr>
+            </table>
+            <p>
+                Each event can take place in space while in the group's ship, or
+                on a planet. Here is a brief summary of each event type.
+            </p>
+            <h3>Advent</h3>
+            <p>
+                An <strong>Advent</strong> is some milestone of discovery. The
+                group gains knowledge about some aspect of the world.
+            </p>
+            <h3>Calm</h3>
+            <p>
+                A <strong>Calm</strong> is a period where very little happens
+                outside the group. This is an opportunity for players and
+                characters to roleplay between themselves.
+            </p>
+            <h3>Combat</h3>
+            <p>
+                A <strong>Combat</strong> is some attack by an outside force.
+                Enemies of the group seek to do them harm.
+            </p>
             <p>
                 When a PC engages an enemy in combat, they start a duel.
                 Assemble a deck of two cards from each suit. The PC's player
@@ -256,78 +337,170 @@
                 killed or knocked unconscious. For PCs, this number is usually
                 2. For NPCs, the number can vary.
             </p>
-            <h1>The Wayfare Engine</h1>
-            <p>
-                The core of Starward is the <a href="../Wayfare Engine/wayfare_engine.html">Wayfare Engine</a>, a method of drawing
-                cards to create events (commonly called encounters in other
-                systems) to interact with. Starward expands on the base Wayfare
-                Engine with ways to incorporate your <em>Field Manuals</em> and
-                other procedural elements to create diverse and rooted events.
-            </p>
-
-            <h2>Events</h2>
-            <p>
-                To determine the kind of event encountered, assemble a full deck
-                of cards (excluding the jokers), and draw one. Consult the
-                following table, reading from left to right.
-            </p>
-            <table class="hide-until-load">
-                <tr>
-                    <th colspan="2">Card</th>
-                    <th class="event-cell">Event</th>
-                </tr>
-                <tr>
-                    <td rowspan="2">Face</td>
-                    <td>Black</td>
-                    <td class="event-cell">Combat</td>
-                </tr>
-                <tr>
-                    <td>Red</td>
-                    <td class="event-cell">Emergency</td>
-                </tr>
-                <tr>
-                    <td rowspan="4">Number</td>
-                    <td>Clubs</td>
-                    <td class="event-cell">Counsel</td>
-                </tr>
-                <tr>
-                    <td>Spades</td>
-                    <td rowspan="2" class="event-cell">Calm</td>
-                </tr>
-                <tr>
-                    <td>Hearts</td>
-                </tr>
-                <tr>
-                    <td>Diamonds</td>
-                    <td class="event-cell">Advent</td>
-                </tr>
-            </table>
-            <h2>Event: Advent</h2>
-            <p>
-                An <strong>Advent</strong> is some milestone of discovery. The
-                group gains knowledge about some aspect of the world.
-            </p>
-            <h2>Event: Calm</h2>
-            <p>
-                A <strong>Calm</strong> is a period where very little happens
-                outside the group. This is an opportunity for players and
-                characters to roleplay between themselves.
-            </p>
-            <h2>Event: Combat</h2>
-            <p>
-                A <strong>Combat</strong> is some attack by an outside force.
-                Enemies of the group seek to do them harm.
-            </p>
-            <h2>Event: Counsel</h2>
+            <h3>Counsel</h3>
             <p>
                 A <strong>Counsel</strong> is a roleplay interaction with a
                 faction outside of the group, usually requiring diplomacy and
                 tact to resolve some issue the outside faction faces.
             </p>
-            <h2>Event: Emergency</h2>
+            <h3>Emergency</h3>
             <p>
                 An <strong>Emergency</strong> is a sudden disaster that the
                 group faces that will result in harm to the group.
+            </p>
+            <p>
+                All events have <strong>Connections</strong> to the game
+                universe, <strong>Stakes</strong> that make them risky, and a
+                <strong>Reward</strong> for completing them.
+            </p>
+
+            <h2>Drawing Events</h2>
+            <p>
+                As suggested in
+                <a href="../Wayfare Engine/wayfare_engine.html"
+                    >The Wayfare Engine</a
+                >, the players in your group can take turns drawing from a
+                complete deck of cards, excluding the jokers. This method is
+                straightforward and very fast. It works well for quick travel
+                events, when you just need one or two. However, Starward expands
+                on this by having the group construct a map each time they enter
+                what's called a sector.
+            </p>
+
+            <h3>Sectors</h3>
+            <p>
+                Sectors are large areas of unexplored area, either in space or
+                on a planet. To construct a sector map, assemble a deck of 17
+                random cards and both jokers, for a total of 19 cards.
+            </p>
+            <p>
+                Keep one joker face up in the deck and shuffle it, keeping the
+                other cards face down. Lay out each card in a hexagonal pattern,
+                like the image below. The face-up joker acts as your group's
+                entrance into the sector, where they start. From there the group
+                travels around, flipping each card (or tile) to determine their
+                event. When the group discovers the other joker, they can leave
+                the sector. This is explained in greater detail later.
+            </p>
+            <img src="../../assets/sector_map.jpg" />
+
+            <hr />
+
+            <h1>Event: Advent</h1>
+            <p>
+                An <strong>Advent</strong> is some milestone of discovery. The
+                group gains knowledge about some aspect of the world.
+            </p>
+            <h2>Connections</h2>
+            <p>
+                What aspect of the game universe does the
+                <strong>Advent</strong> expand your knowledge about?
+            </p>
+            <h2>Scope</h2>
+            <p>How specific and deep is the knowledge being gained?</p>
+            <h2>Stakes</h2>
+            <p>What risk does gaining this knowledge pose?</p>
+            <h2>Reward</h2>
+            <p>
+                Besides the knowledge itself, are there any additional rewards?
+            </p>
+
+            <hr />
+
+            <h1>Event: Calm</h1>
+            <p>
+                A <strong>Calm</strong> is a period where very little happens
+                outside the group. This is an opportunity for players and
+                characters to roleplay between themselves.
+            </p>
+            <h2>Connections</h2>
+            <p>
+                How, if at all, does this <strong>Calm</strong> connect with the
+                rest of the game universe?
+            </p>
+            <h2>Activity</h2>
+            <p>What activity occupies the <strong>Calm</strong>?</p>
+            <h2>Stakes</h2>
+            <p>What kinds of risks must be taken to enjoy the activity?</p>
+            <h2>Reward</h2>
+            <p>
+                Besides the social benefits of relaxing, what other rewards do
+                you enjoy?
+            </p>
+
+            <hr />
+
+            <h1>Event: Combat</h1>
+            <p>
+                A <strong>Combat</strong> is some attack by an outside force.
+                Enemies of the group seek to do them harm.
+            </p>
+            <h2>Connections</h2>
+            <p>
+                How does this <strong>Combat</strong> sit within the politics
+                and structure of the game universe?
+            </p>
+            <h2>Foe(s)</h2>
+            <p>
+                Who is attacking you, or who are you attacking, and how strong
+                are they?
+            </p>
+            <h2>Stakes</h2>
+            <p>
+                Besides life and injury, what's being risked by engaging in
+                <strong>Combat</strong>?
+            </p>
+            <h2>Reward</h2>
+            <p>What is won through risking your life, assuming you survive?</p>
+
+            <hr />
+
+            <h1>Event: Counsel</h1>
+            <p>
+                A <strong>Counsel</strong> is a roleplay interaction with a
+                faction outside of the group, usually requiring diplomacy and
+                tact to resolve some issue the outside faction faces.
+            </p>
+            <h2>Connections</h2>
+            <p>
+                How does this <strong>Counsel</strong> sit within the politics
+                and structure of the game universe?
+            </p>
+            <h2>Members</h2>
+            <p>Who is engaging in this <strong>Counsel</strong>?</p>
+            <h2>Stakes</h2>
+            <p>
+                What are the opposing diplomats seeking to win by making their
+                case to you?
+            </p>
+            <h2>Reward</h2>
+            <p>
+                What are you seeking to win by making your case to the
+                <strong>Counsel</strong>?
+            </p>
+
+            <hr />
+
+            <h1>Event: Emergency</h1>
+            <p>
+                An <strong>Emergency</strong> is a sudden disaster that the
+                group faces that will result in harm to the group.
+            </p>
+            <h2>Connections</h2>
+            <p>
+                How is the <strong>Emergency</strong> tied to the game universe?
+            </p>
+            <h2>Scale</h2>
+            <p>How widespread is the <strong>Emergency</strong></p>
+            <h2>Danger</h2>
+            <p>
+                What dangers are you facing in this <strong>Emergency</strong>?
+            </p>
+            <h2>Cause (Culprit)</h2>
+            <p>
+                Who or what caused the <strong>Emergency</strong>? This is
+                usually discovered during the resolution of the
+                <strong>Emergency</strong>
             </p>
         </div>
 
