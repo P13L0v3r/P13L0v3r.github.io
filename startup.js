@@ -1,12 +1,4 @@
-$(".snippet").each(function () {
-    var snippetToReplace = $(this);
-    var href = snippetToReplace.data("href");
-    $.get(href, function (data) {
-        snippetToReplace.replaceWith(data);
-    })
-});
 $(document).ready(function () {
-    
     $(".custom-button").hover(
         function () {
             $(this).removeClass("raised");
