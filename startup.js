@@ -1,52 +1,49 @@
 $(document).ready(function () {
-    var drfs = new Array();
-    var external = $.Deferred();
-    drfs.push(external.promise());
 
-    $(".snippet").each(function () {
-        var internal = $.Deferred();
-        var snippetToReplace = $(this);
+    var snippets = $(".snippet");
+    var snippetToReplace = null;
+    var index = 0;
+    while (index < snippets.length) {
+        snippetToReplace = $(snippets[i]);
         var href = snippetToReplace.data("href");
+        $.get(href, function (data) {
+            snippetToReplace.replaceWith(data);
+        }).always(function () { index++ });
+    }
 
-        drfs.pop().then(function () {
-            $.get(href, function (data) {
-                snippetToReplace.replaceWith(data);
-            }).done(function () { internal.resolve() }).fail(function () { internal.reject() });
+    /* $(".snippet").each(function () {
+        var snippetToReplace = $(this);
+
+
+    }); */
+
+    $(".custom-button").hover(
+        function () {
+            $(this).removeClass("raised");
+        },
+        function () {
+            $(this).addClass("raised");
+            $(this).removeClass("pressed");
+        }
+    );
+    $(".custom-button")
+        .on("mousedown", function () {
+            $(this).addClass("pressed");
+        })
+        .on("mouseup", function () {
+            $(this).removeClass("pressed");
         });
-        drfs.push(internal.promise());
+    $(".custom-button")
+        .on("click", function () {
+            var href = $(this).data("href");
+            window.location.href = href;
+        });
+    $("td").each(function () {
+        var parent = $(this).parent();
+        var rowspan = $(this).attr("rowspan") ? parseInt($(this).attr("rowspan")) : 1;
+        if (rowspan + parent.index() == parent.parent().children().length) {
+            $(this).addClass("bottom-row");
+        }
     });
-
-    external.resolve("done");
-
-    $.when(drfs).then(function () {
-        $(".custom-button").hover(
-            function () {
-                $(this).removeClass("raised");
-            },
-            function () {
-                $(this).addClass("raised");
-                $(this).removeClass("pressed");
-            }
-        );
-        $(".custom-button")
-            .on("mousedown", function () {
-                $(this).addClass("pressed");
-            })
-            .on("mouseup", function () {
-                $(this).removeClass("pressed");
-            });
-        $(".custom-button")
-            .on("click", function () {
-                var href = $(this).data("href");
-                window.location.href = href;
-            });
-        $("td").each(function () {
-            var parent = $(this).parent();
-            var rowspan = $(this).attr("rowspan") ? parseInt($(this).attr("rowspan")) : 1;
-            if (rowspan + parent.index() == parent.parent().children().length) {
-                $(this).addClass("bottom-row");
-            }
-        });
-        $(".hide-until-load").show();
-    })
+    $(".hide-until-load").show();
 });
