@@ -7,7 +7,8 @@
     --standard-padding: 1rem;
 }
 
-html, body {
+html,
+body {
     padding: 0;
 }
 
@@ -32,8 +33,22 @@ md-block:not([rendered]) {
     width: 80%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--ac-color);
+}
+
+a {
+    color: var(--ac-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--bg-color-dark);
 }
 
 .blog-post footer {
@@ -70,9 +85,6 @@ h1, h2, h3, h4, h5, h6 {
 .nav-box {
     width: 50%;
     border-spacing: calc(var(--standard-padding) * 2) var(--standard-padding);
-}
-
-.nav-box td {
     text-align: center;
     color: var(--ac-color);
 }
@@ -111,13 +123,47 @@ table {
 }
 
 td {
-    border-width: 1px;
-    border-style: solid;
+    border-bottom-width: calc(var(--standard-padding) / 10);
 }
 
-td {
-    padding: 3px;
+.bottom-row {
+    border-bottom: none;
 }
+
+th {
+    border-bottom-width: calc(var(--standard-padding) / 7);
+}
+
+td,
+th {
+    border-bottom-style: solid;
+    border-bottom-color: var(--fg-color);
+    padding: var(--standard-padding);
+}
+
+.event-cell {
+    border-left-style: solid;
+    border-left-width: calc(var(--standard-padding) / 7);
+    border-left-color: var(--fg-color);
+    text-align: left;
+}
+
+/* td:last-child {
+    
+} */
+
+/* td:first-child {
+    border-right-style: solid;
+    border-right-width: calc(var(--standard-padding) / 10);
+    border-right-color: var(--fg-color);
+} */
+
+
+
+/* td {
+    border-width: 1px;
+    border-style: solid;
+} */
 
 @media screen and (min-width: 769px) and (max-width: 1024) {
     html {

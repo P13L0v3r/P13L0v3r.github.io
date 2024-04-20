@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".nav-box td").hover(
+    $(".custom-button").hover(
         function () {
             $(this).removeClass("raised");
         },
@@ -8,17 +8,24 @@ $(document).ready(function () {
             $(this).removeClass("pressed");
         }
     );
-    $(".nav-box td")
+    $(".custom-button")
         .on("mousedown", function () {
             $(this).addClass("pressed");
         })
         .on("mouseup", function () {
             $(this).removeClass("pressed");
         });
-    $(".nav-box td")
+    $(".custom-button")
         .on("click", function () {
             var href = $(this).data("href");
             window.location.href = href;
         });
+    $("td").each(function () {
+        var parent = $(this).parent();
+        var rowspan = $(this).attr("rowspan") ? parseInt($(this).attr("rowspan")) : 1;
+        if (rowspan + parent.index() == parent.parent().children().length) {
+            $(this).addClass("bottom-row");
+        }
+    });
     $(".hide-until-load").show();
 });

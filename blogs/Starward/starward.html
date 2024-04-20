@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>Starward</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="stylesheet" href="../../style.css" />
+        <script src="../../startup.js"></script>
         <style>
             /* It's supposed to look like a tree diagram */
             .tree,
@@ -100,166 +102,272 @@
         </style>
     </head>
     <body>
-        <div class="page">
-            <div class="column left">
-                <h1>Welcome</h1>
+        <div
+            class="neumorphic raised unselectable pointer nav-box custom-button"
+            data-href="../../blog_controller.html"
+            style="
+                width: calc(10% - calc(var(--standard-padding) * 6));
+                position: fixed;
+                left: var(--standard-padding);
+                top: var(--standard-padding);
+            "
+        >
+            Blogs
+        </div>
+        <div class="blog-post centered neumorphic raised">
+            <h1>Welcome</h1>
 
-                <p>
-                    Starward is a collaborative worldbuilding roleplaying game.
-                    Players create the world that they play in as they play. The
-                    game begins with the players each creating a set of six
-                    profiles:
-                </p>
+            <p>
+                Starward is a collaborative worldbuilding roleplaying game.
+                Players create the world that they play in as they play. The
+                game begins with the players each creating a set of profiles:
+            </p>
 
-                <ul>
-                    <li>Star System</li>
-                    <li>Planet</li>
-                    <li>Civilization</li>
-                    <li>Race</li>
-                    <li>Person</li>
-                    <li>Antagonist</li>
-                </ul>
+            <ul>
+                <li>Star System</li>
+                <li>Planet</li>
+                <li>Civilization</li>
+                <li>Culture</li>
+                <li>Race</li>
+                <li>Person</li>
+                <li>Antagonist</li>
+            </ul>
 
-                <p>
-                    These profiles create lore for the game universe that is
-                    only known by the player that writes them. As the game
-                    progresses, the lore in these profiles is revealed to the
-                    rest of the players and characters. Part of the game is
-                    connecting the profiles you create with the other players'
-                    profiles.
-                </p>
+            <p>
+                These profiles create lore for the game universe that is only
+                known by the player that writes them. As the game progresses,
+                the lore in these profiles is revealed to the rest of the
+                players and characters. Part of the game is connecting the
+                profiles you create with the other players' profiles.
+            </p>
 
-                <p>
-                    Initially, the game only prompts the players to provide
-                    surface details in their profiles. Later, the game prompts
-                    the players to furthur develop their profiles. This doesn't
-                    mean that a particularly ambitious player can't develop
-                    their profiles on their own. After all, the profiles are
-                    theirs to write.
-                </p>
+            <p>
+                Initially, the game only prompts the players to provide surface
+                details in their profiles. Later, the game prompts the players
+                to furthur develop their profiles. This doesn't mean that a
+                particularly ambitious player can't develop their profiles on
+                their own. After all, the profiles are theirs to write.
+            </p>
 
-                <p>
-                    Players may use whatever means at their disposal to create
-                    their profiles, but Starward provides worksheets that can be
-                    filled out in <em>Starward Field Manuals</em>. Each player
-                    gets their own <em>Manual</em> that also includes a section
-                    for the character that they will be playing.
-                </p>
+            <p>
+                Players may use whatever means at their disposal to create their
+                profiles, but Starward provides worksheets that can be filled
+                out in
+                <em>Starward Field Manuals</em>. Each player gets their own
+                <em>Field Manual</em> that also includes a section for the
+                character that they will be playing.
+            </p>
 
-                <p>
-                    The profiles that a player creates are intended to be
-                    disconnected. Players should create each profile as if it
-                    was the only profile they created. As the game plays out,
-                    the player may discover that their profiles are connected to
-                    each other or other players' profiles.
-                </p>
+            <p>
+                The profiles that a player creates are intended to be
+                disconnected. Players should create each profile as if it was
+                the only profile they created. As the game plays out, the player
+                may discover that their profiles are connected to each other or
+                other players' profiles.
+            </p>
 
-                <p>
-                    A player creates their character only after they've
-                    completed inital development of their profiles. A player's
-                    character will have its own profile in the player's
-                    <em>Manual</em>. A player is encouraged to develop their
-                    character as much as they'd like. As with other profiles,
-                    certain aspects of a player's character will be discovered
-                    as the game progresses.
-                </p>
-            </div>
-            <div class="column right">
-                <h2>The Game</h2>
-                <p>
-                    Starward is a tabletop roleplaying game (TTRPG) intended for
-                    3-5 players, though the more players the richer the world.
-                    Players roleplay as characters in a space adventure. These
-                    Player Characters (also known as PCs) are all part of the
-                    crew of a starship. PCs encounter threats, make alliances,
-                    uncover treasure, and document the new and strange universe
-                    they discover. This is where Starward diverges from most
-                    other TTRPGs.
-                </p>
-                <p>
-                    Starward is GM-less, meaning that there is no single person
-                    that knows everything about the world or controls the
-                    enemies. Instead of personal character advancement, the
-                    characters' ship advances along multiple development trees.
-                    Instead of dice, Starward uses cards when it becomes
-                    necessary to determine a random outcome. Lastly, Starward is
-                    narrative-based, meaning that the game sacrifices hard and
-                    fast rules for a more classically heroic story experience.
-                    Combat in Starward is minimal; characters don't have
-                    inventories that the players have to manage.
-                </p>
+            <p>
+                A player creates their character only after they've completed
+                inital development of their profiles. A player's character will
+                have its own profile in the player's
+                <em>Manual</em>. A player is encouraged to develop their
+                character as much as they'd like. As with other profiles,
+                certain aspects of a player's character will be discovered as
+                the game progresses.
+            </p>
+            <h1>The Game</h1>
+            <p>
+                Starward is a tabletop roleplaying game (TTRPG) intended for 3-5
+                players, though the more players the richer the world. Players
+                roleplay as characters in a space adventure. These Player
+                Characters (also known as PCs) are all part of the crew of a
+                starship. PCs encounter threats, make alliances, uncover
+                treasure, and document the new and strange universe they
+                discover. This is where Starward diverges from most other
+                TTRPGs.
+            </p>
+            <p>
+                Starward is GM-less, meaning that there is no single person that
+                knows everything about the world or controls the enemies.
+                Instead of personal character advancement, the characters' ship
+                advances along multiple development trees. Instead of dice,
+                Starward uses cards when it becomes necessary to determine a
+                random outcome. Lastly, Starward is narrative-based, meaning
+                that the game sacrifices hard and fast rules for a more
+                classically heroic story experience. Combat in Starward is
+                minimal; characters don't have inventories that the players have
+                to manage.
+            </p>
 
-                <p>
-                    Starward is a game about finding your way in a vast
-                    universe. Players decide what story they want to tell.
-                    Instead of a strict map, characters travel narratively
-                    between points of interest. The players discover these
-                    points of interest as they play, creating a history of their
-                    travels. Characters can also travel through uncharted space
-                    to find more points of interest, search for clues, or blaze
-                    trails.
-                </p>
-                <h2>Some Terms</h2>
-                <p>
-                    <strong>PC.</strong> Refers to any character created by a
-                    player.
-                </p>
-                <p>
-                    <strong>NPC.</strong> Refers to any character created by the
-                    system.
-                </p>
-                <p><strong>Creature.</strong> Refers to any living thing.</p>
-            </div>
+            <p>
+                Starward is a game about finding your way in a vast universe.
+                Players decide what story they want to tell. Instead of a strict
+                map, characters travel narratively between points of interest.
+                The players discover these points of interest as they play,
+                creating a history of their travels. Characters can also travel
+                through uncharted space to find more points of interest, search
+                for clues, or blaze trails.
+            </p>
+            <h3>Some Terms</h3>
+            <p>
+                <strong>PC.</strong> Stands for "Player Character." Refers to
+                any character played by a player.
+            </p>
+            <p>
+                <strong>NPC.</strong> Stands for "Non Player Character." Refers
+                to any character created by the system.
+            </p>
+            <p>
+                <strong>Creature.</strong> Refers to any living thing. This is
+                important because the players will encounter all manner of life
+                in the universe they create.
+            </p>
+            <p>
+                <strong>Deck.</strong> Refers to a collection of cards. The
+                rules will call for a deck to be assembled. When this happens
+                the contents of the deck will be specified.
+            </p>
+
+            <h1>Combat</h1>
+            <p>
+                When a PC engages an enemy in combat, they start a duel.
+                Assemble a deck of two cards from each suit. The PC's player
+                then draws from this deck to determine the outcome of the duel,
+                based on the drawn suit. A PC may have a feature that lets them
+                alter the duel deck, usually by adding a card of a certain suit.
+            </p>
+            <table class="hide-until-load">
+                <tr>
+                    <th>Card Suit</th>
+                    <th class="event-cell">Outcome</th>
+                </tr>
+                <tr>
+                    <td>Diamond</td>
+                    <td class="event-cell">
+                        PC hits enemy and enemy misses PC.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Club</td>
+                    <td class="event-cell">
+                        Enemy hits PC and PC misses enemy.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Heart</td>
+                    <td class="event-cell">Enemy and PC miss each other.</td>
+                </tr>
+                <tr>
+                    <td>Spade</td>
+                    <td class="event-cell">Enemy and PC hit each other.</td>
+                </tr>
+            </table>
+            <p>
+                All creatures can take a certain number of hits before being
+                killed or knocked unconscious. For PCs, this number is usually
+                2. For NPCs, the number can vary.
+            </p>
+            <h1>The Wayfare Engine</h1>
+            <p>
+                The core of Starward is the <a href="../Wayfare Engine/wayfare_engine.html">Wayfare Engine</a>, a method of drawing
+                cards to create events (commonly called encounters in other
+                systems) to interact with. Starward expands on the base Wayfare
+                Engine with ways to incorporate your <em>Field Manuals</em> and
+                other procedural elements to create diverse and rooted events.
+            </p>
+
+            <h2>Events</h2>
+            <p>
+                To determine the kind of event encountered, assemble a full deck
+                of cards (excluding the jokers), and draw one. Consult the
+                following table, reading from left to right.
+            </p>
+            <table class="hide-until-load">
+                <tr>
+                    <th colspan="2">Card</th>
+                    <th class="event-cell">Event</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Face</td>
+                    <td>Black</td>
+                    <td class="event-cell">Combat</td>
+                </tr>
+                <tr>
+                    <td>Red</td>
+                    <td class="event-cell">Emergency</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Number</td>
+                    <td>Clubs</td>
+                    <td class="event-cell">Counsel</td>
+                </tr>
+                <tr>
+                    <td>Spades</td>
+                    <td rowspan="2" class="event-cell">Calm</td>
+                </tr>
+                <tr>
+                    <td>Hearts</td>
+                </tr>
+                <tr>
+                    <td>Diamonds</td>
+                    <td class="event-cell">Advent</td>
+                </tr>
+            </table>
+            <h2>Event: Advent</h2>
+            <p>
+                An <strong>Advent</strong> is some milestone of discovery. The
+                group gains knowledge about some aspect of the world.
+            </p>
+            <h2>Event: Calm</h2>
+            <p>
+                A <strong>Calm</strong> is a period where very little happens
+                outside the group. This is an opportunity for players and
+                characters to roleplay between themselves.
+            </p>
+            <h2>Event: Combat</h2>
+            <p>
+                A <strong>Combat</strong> is some attack by an outside force.
+                Enemies of the group seek to do them harm.
+            </p>
+            <h2>Event: Counsel</h2>
+            <p>
+                A <strong>Counsel</strong> is a roleplay interaction with a
+                faction outside of the group, usually requiring diplomacy and
+                tact to resolve some issue the outside faction faces.
+            </p>
+            <h2>Event: Emergency</h2>
+            <p>
+                An <strong>Emergency</strong> is a sudden disaster that the
+                group faces that will result in harm to the group.
+            </p>
         </div>
 
-        <div class="page">
-            <div class="column left">
-                <h2>Combat</h2>
-                <p>
-                    When a PC engages an enemy in combat, they start a duel.
-                    Assemble a deck of two cards from each suit. The PC's player
-                    then draws from this deck to determine the outcome of the
-                    duel, based on the drawn suit. A PC may have a feature that
-                    lets them alter the duel deck, usually by adding a card of a
-                    certain suit.
-                </p>
-                <table class="full">
-                    <tr>
-                        <th style="width: 25%">Card Suit</th>
-                        <th>Outcome</th>
-                    </tr>
-                    <tr>
-                        <td>Diamond</td>
-                        <td>PC hits enemy and enemy misses PC.</td>
-                    </tr>
-                    <tr>
-                        <td>Club</td>
-                        <td>Enemy hits PC and PC misses enemy.</td>
-                    </tr>
-                    <tr>
-                        <td>Heart</td>
-                        <td>Enemy and PC miss each other.</td>
-                    </tr>
-                    <tr>
-                        <td>Spade</td>
-                        <td>Enemy and PC hit each other.</td>
-                    </tr>
-                </table>
-                <p>
-                    All creatures can take a certain number of hits before being
-                    killed or knocked unconscious. For PCs, this number is
-                    usually 2. For NPCs, the number can vary.
-                </p>
-
-                <figure>
-                    <ul class="tree">
-                        <hr />
+        <figure>
+            <ul class="tree">
+                <hr />
+                <li>
+                    <span>Root</span>
+                    <ul>
                         <li>
-                            <span>Root</span>
+                            <span>First</span>
                             <ul>
                                 <li>
                                     <span>First</span>
-                                    <ul>
+                                </li>
+                                <li>
+                                    <span>Second</span>
+                                </li>
+                                <li>
+                                    <span>Third</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Second</span>
+                            <ul>
+                                <li>
+                                    <span>First</span>
+                                    <ul class="boundary">
                                         <li>
                                             <span>First</span>
                                         </li>
@@ -273,122 +381,15 @@
                                 </li>
                                 <li>
                                     <span>Second</span>
-                                    <ul>
-                                        <li>
-                                            <span>First</span>
-                                            <ul class="boundary">
-                                                <li>
-                                                    <span>First</span>
-                                                </li>
-                                                <li>
-                                                    <span>Second</span>
-                                                </li>
-                                                <li>
-                                                    <span>Third</span>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <span>Second</span>
-                                        </li>
-                                        <li>
-                                            <span>Third</span>
-                                        </li>
-                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Third</span>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                </figure>
-            </div>
-        </div>
-        <div class="page">
-            <div class="column left">
-                <h2>Events</h2>
-                <p>
-                    To determine the kind of event encountered, assemble a full
-                    deck of cards (excluding the jokers), and draw one. Consult
-                    the following table, reading from left to right.
-                </p>
-                <table>
-                    <tr>
-                        <th colspan="2">Card</th>
-                        <th>Event</th>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">Face</td>
-                        <td>Black</td>
-                        <td>Combat</td>
-                    </tr>
-                    <tr>
-                        <td>Red</td>
-                        <td>Emergency</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="4">Number</td>
-                        <td>Clubs</td>
-                        <td>Counsel</td>
-                    </tr>
-                    <tr>
-                        <td>Spades</td>
-                        <td rowspan="2">Calm</td>
-                    </tr>
-                    <tr>
-                        <td>Hearts</td>
-                    </tr>
-                    <tr>
-                        <td>Diamonds</td>
-                        <td>Advent</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="page">
-            <div class="column left">
-                <h2>Event: Advent</h2>
-                <p>
-                    An <strong>Advent</strong> is some milestone of discovery.
-                    The group gains knowledge about some aspect of the world.
-                </p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="column left">
-                <h2>Event: Calm</h2>
-                <p>
-                    A <strong>Calm</strong> is a period where very little
-                    happens outside the group. This is an opportunity for
-                    players and characters to roleplay between themselves.
-                </p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="column left">
-                <h2>Event: Combat</h2>
-                <p>
-                    A <strong>Combat</strong> is some attack by an outside
-                    force. Enemies of the group seek to do them harm.
-                </p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="column left">
-                <h2>Event: Counsel</h2>
-                <p>
-                    A <strong>Counsel</strong> is a roleplay interaction with a
-                    faction outside of the group, usually requiring diplomacy
-                    and tact to resolve some issue the outside faction faces.
-                </p>
-            </div>
-        </div>
-        <div class="page">
-            <div class="column left">
-                <h2>Event: Emergency</h2>
-                <p>
-                    An <strong>Emergency</strong> is a sudden disaster that the
-                    group faces that will result in harm to the group.
-                </p>
-            </div>
-        </div>
+                </li>
+            </ul>
+        </figure>
     </body>
 </html>

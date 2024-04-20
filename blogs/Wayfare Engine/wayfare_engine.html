@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Wayfare Engine</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../../style.css" />
+        <script src="../../startup.js"></script>
+    </head>
+    <body>
+        <div
+            class="neumorphic raised unselectable pointer nav-box custom-button"
+            data-href="../../blog_controller.html"
+            style="
+                width: calc(10% - calc(var(--standard-padding) * 6));
+                position: fixed;
+                left: var(--standard-padding);
+                top: var(--standard-padding);
+            "
+        >
+            Blogs
+        </div>
+        <div class="blog-post centered neumorphic raised">
+            <h1>The Wayfare Engine</h1>
+            <p>
+                The Wayfare Engine is a method of drawing cards to create events
+                (commonly called encounters in other systems) to interact with.
+                The events provided here are basic and versatile, while
+                remaining inspiring.
+            </p>
+            <p>
+                The Wayfare Engine is intended to be used in roleplaying games
+                that focus on exploration, discovery, or advancement. They can
+                also be inserted into a system as a way of generating random
+                encounters or used as a type of oracle in solo games.
+            </p>
+            <p></p>
+            <h3>Some Terms</h3>
+            <p>
+                <strong>Deck.</strong> Refers to a collection of cards. The
+                rules will call for a deck to be assembled. When this happens
+                the contents of the deck will be specified.
+            </p>
+            <h2>Events</h2>
+            <p>
+                To determine the kind of event encountered, assemble a full deck
+                of cards (excluding the jokers), and draw one. Consult the
+                following table, reading from left to right.
+            </p>
+            <table class="hide-until-load">
+                <tr>
+                    <th colspan="2">Card</th>
+                    <th class="event-cell">Event</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Face</td>
+                    <td>Black</td>
+                    <td class="event-cell">Combat</td>
+                </tr>
+                <tr>
+                    <td>Red</td>
+                    <td class="event-cell">Emergency</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Number</td>
+                    <td>Clubs</td>
+                    <td class="event-cell">Counsel</td>
+                </tr>
+                <tr>
+                    <td>Spades</td>
+                    <td rowspan="2" class="event-cell">Calm</td>
+                </tr>
+                <tr>
+                    <td>Hearts</td>
+                </tr>
+                <tr>
+                    <td>Diamonds</td>
+                    <td class="event-cell">Advent</td>
+                </tr>
+            </table>
+            <h2>Event: Advent</h2>
+            <p>
+                An <strong>Advent</strong> is some milestone of discovery. The
+                group gains knowledge about some aspect of the world.
+            </p>
+            <h2>Event: Calm</h2>
+            <p>
+                A <strong>Calm</strong> is a period where very little happens
+                outside the group. This is an opportunity for players and
+                characters to roleplay between themselves.
+            </p>
+            <h2>Event: Combat</h2>
+            <p>
+                A <strong>Combat</strong> is some attack by an outside force.
+                Enemies of the group seek to do them harm.
+            </p>
+            <h2>Event: Counsel</h2>
+            <p>
+                A <strong>Counsel</strong> is a roleplay interaction with a
+                faction outside of the group, usually requiring diplomacy and
+                tact to resolve some issue the outside faction faces.
+            </p>
+            <h2>Event: Emergency</h2>
+            <p>
+                An <strong>Emergency</strong> is a sudden disaster that the
+                group faces that will result in harm to the group.
+            </p>
+        </div>
+    </body>
+</html>
