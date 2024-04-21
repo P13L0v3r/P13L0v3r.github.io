@@ -60,8 +60,7 @@ a:hover {
 
 .neumorphic {
     padding: var(--standard-padding);
-    margin-top: var(--standard-padding);
-    margin-bottom: var(--standard-padding);
+    margin: var(--standard-padding);
     border-radius: var(--standard-padding);
     box-shadow:
         inset calc(var(--standard-padding) / 2) calc(var(--standard-padding) / 2) var(--standard-padding) var(--bg-color-dark),
@@ -119,9 +118,19 @@ a:hover {
     display: none;
 }
 
+.return-to-blogs {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: calc(var(--standard-padding) * 2);
+    text-align: center;
+    color: var(--ac-color);
+}
+
 table {
     text-align: center;
     border-spacing: 0;
+    width: 100%;
 }
 
 td {
@@ -176,6 +185,17 @@ th {
         border-radius: var(--standard-padding);
         width: calc(var(--standard-padding) * 25);
     }
+
+    .return-to-blogs {
+        position: fixed;
+        left: var(--standard-padding);
+        top: var(--standard-padding);
+        width: calc(10% - calc(var(--standard-padding) * 6));
+    }
+
+    table {
+        width: max-content;
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -186,5 +206,16 @@ th {
     .tile iframe {
         border-radius: var(--standard-padding);
         width: calc(var(--standard-padding) * 30);
+    }
+
+    .return-to-blogs {
+        position: fixed;
+        left: var(--standard-padding);
+        top: var(--standard-padding);
+        width: calc(10% - calc(var(--standard-padding) * 6));
+    }
+
+    table {
+        width: max-content;
     }
 }
