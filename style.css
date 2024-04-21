@@ -90,9 +90,11 @@ a:hover {
 }
 
 .focus-box {
-    position: flex;
+    display: flex;
     width: 80%;
-    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .centered {
