@@ -51,8 +51,9 @@ const bingo_items = {
 let bingo_cells = document.querySelectorAll('td');
 bingo_cells.forEach(cell => {
 	if (cell.id != "free") {
-		let r = Math.floor(Math.random() * bingo_items.length);
-		cell.innerText = bingo_items[cell.id][r];
+		let category = bingo_items[cell.id];
+		let r = Math.floor(Math.random() * category.length);
+		cell.innerText = category[r];
 		cell.addEventListener("click", (event) => {
 			event.target.classList.toggle("selected");
 		});
