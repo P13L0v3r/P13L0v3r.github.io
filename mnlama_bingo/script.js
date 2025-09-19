@@ -1,9 +1,25 @@
 const bingo_items = {
     meta: [
         "There's an issue with the music bot",
+        "There's an issue with the music bot",
+        "There's an issue with the music bot",
+        "There's an issue with the music bot",
+        "There's an issue with the music bot",
+        "There's dead air for more than 30 seconds",
+        "There's dead air for more than 30 seconds",
+        "There's dead air for more than 30 seconds",
+        "There's dead air for more than 30 seconds",
         "There's dead air for more than 30 seconds",
         "You were on time",
         "Aaron doesn't do a character voice",
+        "Aaron doesn't do a character voice",
+        "Aaron doesn't do a character voice",
+        "Aaron doesn't do a character voice",
+        "Aaron doesn't do a character voice",
+        "An NPC talks in a surfer dude voice",
+        "An NPC talks in a surfer dude voice",
+        "An NPC talks in a surfer dude voice",
+        "An NPC talks in a surfer dude voice",
         "An NPC talks in a surfer dude voice",
         "The opening changes",
         "The closing changes",
@@ -40,20 +56,30 @@ const bingo_items = {
     ],
     clues: [
         "The Champion of Ares",
+        "The Champion of Ares",
+        "The Children of Discord",
         "The Children of Discord",
         "God drama",
+        "God drama",
+        "The cull",
         "The cull",
         "Polyphemus",
-		"The presence inside Niki",
+        "Polyphemus",
+        "The presence inside Niki",
+        "The presence inside Niki",
     ],
 };
 let bingo_cells = document.querySelectorAll('td');
 bingo_cells.forEach(cell => {
-	if (cell.id != "free") {
+	if (cell.id != "free" && cell.id != "") {
 		console.log(cell.id)
 		let category = bingo_items[cell.id];
 		let r = Math.floor(Math.random() * category.length);
-		cell.innerText = category[r];
+		if (cell.id == "meta" || cell.id == "clues") {
+			cell.innerText = category.splice(r, 1);
+		} else {
+			cell.innerText = category[r];
+		}
 		cell.addEventListener("click", (event) => {
 			event.target.classList.toggle("selected");
 		});
