@@ -45,12 +45,12 @@ const bingo_items = {
         "The cull",
         "Polyphemus",
 		"The presence inside Niki",
-		"Aether",
     ],
 };
 let bingo_cells = document.querySelectorAll('td');
 bingo_cells.forEach(cell => {
 	if (cell.id != "free") {
+		console.log(cell.id)
 		let category = bingo_items[cell.id];
 		let r = Math.floor(Math.random() * category.length);
 		cell.innerText = category[r];
