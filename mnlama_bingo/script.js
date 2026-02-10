@@ -5,13 +5,14 @@ const bingo_items = {
         "There's dead air for more than 30 seconds",
         "There's dead air for more than 30 seconds",
         "You were on time",
-        "Aaron doesn't do a character voice",
-        "Aaron doesn't do a character voice",
-        "Aaron doesn't do a character voice",
+        "The DM doesn't do a character voice",
+        "The DM doesn't do a character voice",
         "An NPC talks in a surfer dude voice",
         "An NPC talks in a surfer dude voice",
         "The opening changes",
         "The closing changes",
+        "You make a pretty good meme",
+        "You politely encourage getting back on track",
     ],
     character: [
         "Sophia chooses not to participate in an activity",
@@ -21,6 +22,7 @@ const bingo_items = {
         "A PC convinces Callista to join in an activity",
         "A PC convinces Sophia to join in an activity",
         "A PC wants to go to the library",
+        "Darius uses the choker",
     ],
     roleplay: [
         "An NPC flirts with a PC",
@@ -30,6 +32,7 @@ const bingo_items = {
         "A PC encourages another character",
         "A PC opens up to another PC",
         "A PC bullies another PC",
+        "A god gets up to no good",
     ],
     rolls: [
         "A PC rolls a nat 1",
@@ -42,6 +45,8 @@ const bingo_items = {
         "You fail an ability check",
         "You succeed a saving throw",
         "You fail a saving throw",
+        "You roll a 7",
+        "You roll a 13",
     ],
     clues: [
         "Thalis",
@@ -56,6 +61,7 @@ const bingo_items = {
         "Polyphemus",
         "The other Niki",
         "The other Niki",
+        "The fish people",
     ],
 };
 let bingo_cells = document.querySelectorAll('td');
