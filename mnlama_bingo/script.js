@@ -22,7 +22,6 @@ const bingo_items = {
         "A PC convinces Callista to join in an activity",
         "A PC convinces Sophia to join in an activity",
         "A PC wants to go to the library",
-        "Darius uses the choker",
     ],
     roleplay: [
         "An NPC flirts with a PC",
