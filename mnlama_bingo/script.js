@@ -56,11 +56,12 @@ const bingo_items = {
         "God drama",
         "The cull",
         "The cull",
-        "Polyphemus",
-        "Polyphemus",
-        "The other Niki",
-        "The other Niki",
+        "The item within Niki",
+        "The item within Niki",
         "The fish people",
+        "Epirus",
+        "The Umbral monster",
+        "The BBB",
     ],
 };
 let bingo_cells = document.querySelectorAll('td');
